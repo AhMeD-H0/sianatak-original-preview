@@ -1,0 +1,335 @@
+import { workItems } from './site';
+
+const worksPreviewProducts = workItems.slice(0, 6).map((item) => ({
+  name: item.title,
+  price: item.category === 'glass' ? 'Glass & Aluminum Works' : 'Cooling & Technical Works',
+  image: item.image,
+}));
+
+const allWorksProducts = workItems.map((item) => ({
+  name: item.title,
+  price: item.category === 'glass' ? 'Glass & Aluminum Works' : 'Cooling & Technical Works',
+  image: item.image,
+}));
+
+const glassStock = {
+  tallFacade: '/images/site/glass-tall-facade.jpg',
+  modernHouse: '/images/site/glass-modern-house.jpg',
+  modernVilla: '/images/site/glass-modern-villa.jpg',
+  officeFacade: '/images/site/glass-office-facade-small.jpg',
+};
+
+const technicalStock = {
+  outdoor: '/images/site/ac-outdoor.jpg',
+  duct: '/images/site/ac-duct.jpg',
+};
+
+export const homePage = {
+  hero: {
+    caption: 'SIANATAK · RIYADH',
+    headline: 'حلول متكاملة للزجاج والألمنيوم والتكييف والخدمات الفنية',
+    subhead: 'تنفيذ احترافي للمباني والمنشآت، من الواجهات وزجاج السكريت إلى أنظمة التكييف والصيانة والخدمات الفنية.',
+    ctaText: 'تعرّف على خدماتنا',
+    ctaHref: '/services',
+    videoSrc: '/videos/glass-city.mp4',
+  },
+  showcase: {
+    caption: 'INTEGRATED SOLUTIONS',
+    headline: 'حلول متكاملة بخبرة تُبنى عليها الثقة',
+    subhead: 'نقدّم مجموعة متكاملة من الحلول للمباني والمنشآت، بداية من أعمال الزجاج والألمنيوم والواجهات، وصولًا إلى التكييف والتبريد وأنظمة المراقبة والكهرباء والصيانة العامة. نلتزم في كل مشروع بالدقة في التنفيذ، جودة التفاصيل، وسرعة الاستجابة؛ لنقدّم حلولًا عملية تجمع بين الأداء، الجودة، والمظهر المميز.',
+    ctaText: 'شوف أعمالنا',
+    ctaHref: '/works',
+  },
+  glassFeatured: {
+    caption: 'GLASS & ALUMINUM',
+    headline: 'زجاج وألمنيوم بتفاصيل تفرق',
+    body: 'ننفّذ حلول الزجاج والألمنيوم بمختلف أنواعها، من الزجاج السكريت والواجهات إلى أنظمة Curtain Wall وStructural Curtain Wall والشورات الزجاجية والدرابزين، بتصاميم عصرية وتنفيذ دقيق.',
+    ctaText: 'اكتشف حلول الزجاج والألمنيوم',
+    ctaHref: '/services',
+    imageSrc: glassStock.modernVilla,
+    imageAlt: 'واجهة حديثة بزجاج وألمنيوم',
+  },
+  technicalFeatured: {
+    caption: 'COOLING & TECHNICAL SERVICES',
+    headline: 'حلول فنية تحافظ على كفاءة منشأتك',
+    body: 'نقدّم خدمات التكييف والتبريد، تركيب وصيانة المكيفات، تنظيف المكيفات وتعبئة الفريون، إلى جانب كاميرات المراقبة، أعمال الكهرباء، والصيانة العامة، بأيدي فنيين متخصصين وسرعة استجابة.',
+    ctaText: 'تعرّف على الخدمات الفنية',
+    ctaHref: '/services',
+    imageSrc: technicalStock.duct,
+    imageAlt: 'فني أثناء تنفيذ أعمال تكييف وتهوية',
+    reversed: true,
+  },
+  collection: {
+    caption: 'WORKS PREVIEW · SWIPE TO WATCH OUR WORK →',
+    headline: 'من الفكرة إلى التنفيذ',
+    products: worksPreviewProducts,
+  },
+  brand: {
+    headline: 'ليش تختارنا؟',
+    body: 'خبرة وكفاءة بفريق متخصص، دقة في التنفيذ والاهتمام بالتفاصيل، سرعة استجابة لاحتياجاتك، وجودة تستاهل الثقة بأسعار تنافسية.',
+    ctaText: 'من نحن',
+    ctaHref: '/about',
+    videoSrc: '/videos/metal-parts-showcase.mp4',
+  },
+  contactCta: {
+    headline: 'جاهز تبدأ مشروعك؟',
+    body: 'سواء كنت تبحث عن حلول الزجاج والألمنيوم أو خدمات التكييف والتبريد والخدمات الفنية، نحن جاهزون لتقديم الحل المناسب لمشروعك.',
+    handle: 'الرياض · حي الفيصلية',
+    ctaText: 'تواصل معنا',
+    ctaHref: '/contact',
+    videoSrc: '/videos/glass-facade.mp4',
+    // imageSrc: '/images/site/contact.jpg',
+    // imageAlt: '...',
+  },
+};
+
+export const aboutPage = {
+  hero: {
+    caption: 'ABOUT US',
+    headline: 'نبني الثقة قبل أن نبني أي مشروع',
+    subhead: 'شركة صيانتك هي شركة متخصصة في تقديم حلول متكاملة للمباني والمنشآت، من خلال خبرة تجمع بين أعمال الزجاج والألمنيوم، والتكييف والتبريد، وأنظمة المراقبة، والأعمال الكهربائية، والصيانة العامة.',
+    ctaText: 'اكتشف خدماتنا',
+    ctaHref: '/services',
+    videoSrc: '/videos/still-life-showcase.mp4',
+  },
+  showcase: {
+    caption: 'OUR STORY',
+    headline: 'النجاح يبدأ من التفاصيل',
+    subhead: 'نؤمن أن نجاح أي مشروع يبدأ من التفاصيل؛ لذلك نحرص على الجمع بين جودة التنفيذ، كفاءة الأداء، والاهتمام باحتياجات العميل في كل مرحلة من مراحل العمل. من التصميم والتنفيذ إلى الصيانة والحلول الفنية، نعمل على تقديم خدمات احترافية تلائم متطلبات المشاريع المختلفة، مع الالتزام بالدقة، الجودة، وسرعة الاستجابة.',
+    ctaText: 'شاهد أعمالنا',
+    ctaHref: '/works',
+  },
+  vision: {
+    caption: 'VISION',
+    headline: 'رؤيتنا',
+    body: 'أن نكون خيارًا موثوقًا في تقديم الحلول المتكاملة للمباني والمنشآت، من خلال تطوير خدماتنا والارتقاء بمستوى التنفيذ بما يواكب احتياجات السوق وتطلعات عملائنا.',
+    ctaText: 'خدماتنا',
+    ctaHref: '/services',
+    imageSrc: '/images/site/vision.jpg',
+    imageAlt: 'واجهة زجاجية حديثة',
+  },
+  mission: {
+    caption: 'MISSION',
+    headline: 'رسالتنا',
+    body: 'تقديم حلول عملية واحترافية تجمع بين الجودة، الكفاءة، والتصميم المميز، مع بناء علاقات طويلة الأمد مع عملائنا تقوم على الثقة والالتزام.',
+    ctaText: 'تواصل معنا',
+    ctaHref: '/contact',
+    imageSrc: '/images/site/mision.jpg',
+    imageAlt: 'منزل حديث بواجهات زجاج وألمنيوم',
+    reversed: true,
+  },
+  collection: {
+    caption: 'WHAT SETS US APART',
+    headline: 'وش يميزنا',
+    products: [
+      { name: 'حلول متكاملة', price: 'مجموعة واسعة من الخدمات تحت مظلة واحدة لتلبية احتياجات مشروعك' },
+      { name: 'خبرة فنية', price: 'فنيون متخصصون وخبرة عملية في مختلف مجالات العمل' },
+      { name: 'جودة في التفاصيل', price: 'نهتم بكل مرحلة من مراحل التنفيذ عشان نضمن أفضل نتيجة ممكنة' },
+      { name: 'التزام واستجابة', price: 'سرعة في التعامل مع احتياجات العملاء وحرص على تنفيذ الأعمال بكفاءة' },
+    ],
+  },
+  brand: {
+    headline: 'من التفاصيل الصغيرة نصنع فرقًا كبيرًا',
+    body: 'نسعى في كل مشروع إلى تقديم نتيجة تجمع بين الجودة، العملية، والمظهر المميز، من التصميم والتنفيذ إلى الصيانة والحلول الفنية.',
+    ctaText: 'أعمالنا',
+    ctaHref: '/works',
+    videoSrc: '/videos/glass-facade.mp4',
+  },
+  contactCta: {
+    headline: 'خلّنا نبدأ مشروعك',
+    body: 'فريقنا جاهز للاستماع إلى احتياجاتك وتقديم الحل المناسب باحترافية وسرعة استجابة.',
+    handle: 'صيانتك · الرياض',
+    ctaText: 'تواصل معنا',
+    ctaHref: '/contact',
+    videoSrc: '/videos/metal-parts-hero.mp4',
+  },
+};
+
+export const servicesPage = {
+  hero: {
+    caption: 'SERVICES',
+    headline: 'حلول متكاملة لكل تفاصيل مشروعك',
+    subhead: 'نقدم مجموعة متكاملة من الخدمات للمباني والمنشآت، تجمع بين الحلول الجمالية والهندسية والخدمات الفنية، مع الالتزام بجودة التنفيذ ودقة التفاصيل.',
+    ctaText: 'اطلب خدمتك الآن',
+    ctaHref: '/contact',
+    videoSrc: '/videos/glass-facade.mp4',
+  },
+  showcase: {
+    caption: 'ONE COMPANY · TWO DIVISIONS',
+    headline: 'كل حلول مشروعك تحت سقف واحد',
+    subhead: 'الزجاج والألمنيوم والتكييف والتبريد والخدمات الفنية في صفحة واحدة وتجربة واحدة.',
+    ctaText: 'شاهد أعمالنا',
+    ctaHref: '/works',
+  },
+  glassFeatured: {
+    caption: 'GLASS & ALUMINUM',
+    headline: 'حلول الزجاج والألمنيوم',
+    body: 'ننفّذ أعمال الزجاج والألمنيوم بتصاميم عصرية وحلول عملية تناسب مختلف المشاريع، مع الاهتمام بجودة الخامات ودقة التنفيذ.',
+    ctaText: 'شاهد أعمال الزجاج والألمنيوم',
+    ctaHref: '/works',
+    imageSrc: glassStock.modernVilla,
+    imageAlt: 'فيلا حديثة بواجهات زجاج وألمنيوم',
+  },
+  glassServices: {
+    caption: 'GLASS & ALUMINUM SERVICES',
+    headline: 'خدماتنا تشمل',
+    products: [
+      { name: 'زجاج سكريت', price: 'حلول زجاجية آمنة وعملية بمختلف الاستخدامات والتصاميم' },
+      { name: 'أعمال الألمنيوم', price: 'تنفيذ حلول ألمنيوم متنوعة حسب احتياجات المشروع' },
+      { name: 'واجهات Structural Curtain Wall', price: 'واجهات عصرية تجمع بين التصميم والأداء للمباني والمنشآت' },
+      { name: 'Curtain Wall', price: 'حلول واجهات زجاجية وألمنيوم بتصاميم مخصصة لمختلف المشاريع' },
+      { name: 'أنظمة الشورات الزجاجية', price: 'كبائن شاور زجاجية بتصاميم أنيقة تجمع بين العملية والفخامة' },
+      { name: 'الدرابزين', price: 'حلول درابزين تجمع بين المتانة والشكل العصري' },
+      { name: 'الديكورات الزجاجية والألمنيوم', price: 'تفاصيل مخصصة تضيف لمسة جمالية وعملية للمساحات الداخلية والخارجية' },
+    ],
+  },
+  technicalFeatured: {
+    caption: 'COOLING & TECHNICAL SERVICES',
+    headline: 'التكييف والتبريد والخدمات الفنية',
+    body: 'نقدم حلولًا فنية متكاملة للحفاظ على كفاءة المنشآت وراحة مستخدميها، من خلال خدمات التركيب والصيانة والتجهيز بأيدي فنيين متخصصين. نحرص على تقديم خدمة سريعة واحترافية، مع التركيز على جودة التنفيذ وسلامة الأنظمة واستمرارية أدائها.',
+    ctaText: 'اطلب خدمتك الآن',
+    ctaHref: '/contact',
+    imageSrc: technicalStock.duct,
+    imageAlt: 'تنفيذ أعمال تكييف وتهوية داخل منشأة',
+    reversed: true,
+  },
+  technicalServices: {
+    caption: 'COOLING & TECHNICAL SERVICES',
+    headline: 'خدماتنا تشمل',
+    products: [
+      { name: 'تركيب وصيانة مكيفات سبليت', price: '' },
+      { name: 'تنظيف المكيفات', price: '' },
+      { name: 'تعبئة الفريون', price: '' },
+      { name: 'كاميرات المراقبة', price: '' },
+      { name: 'صيانة أنظمة المراقبة', price: '' },
+      { name: 'أعمال الكهرباء والتمديدات الكهربائية', price: '' },
+      { name: 'الصيانة العامة للمنازل والفلل والمنشآت', price: '' },
+    ],
+  },
+  brand: {
+    headline: 'الجودة والكفاءة في حل واحد',
+    body: 'لأننا لا نقدم مجرد خدمة منفردة، بل نسعى لتوفير حلول عملية متكاملة تلائم احتياجات المشروع، من التفاصيل الجمالية والهندسية إلى الأنظمة الفنية والصيانة. دقة في التنفيذ، جودة في الأداء، وسرعة في الاستجابة.',
+    ctaText: 'تواصل معنا',
+    ctaHref: '/contact',
+    videoSrc: '/videos/metal-parts-hero.mp4',
+  },
+  contactCta: {
+    headline: 'اطلب خدمتك الآن',
+    body: 'فريق متخصص جاهز لتقديم الحل المناسب لمشروعك وتنفيذه باحترافية.',
+    handle: '0536213276 · 0547856474',
+    ctaText: 'تواصل معنا',
+    ctaHref: '/contact',
+    videoSrc: '/videos/glass-facade.mp4',
+  },
+};
+
+export const worksPage = {
+  hero: {
+    caption: 'OUR WORKS',
+    headline: 'أعمالنا تتكلم عن خبرتنا',
+    subhead: 'من التفاصيل الدقيقة إلى التنفيذ المتكامل، نحرص على أن يعكس كل مشروع مستوى الجودة والاهتمام الذي نقدمه في كل مرحلة.',
+    ctaText: 'استكشف الأعمال',
+    ctaHref: '#works-collection',
+    videoSrc: '/videos/still-life-showcase.mp4',
+  },
+  showcase: {
+    caption: 'SWIPE TO WATCH OUR WORK →',
+    headline: 'شوف مشاريعنا ولاحظ الفرق في التفاصيل',
+    subhead: 'استكشف نماذج من أعمالنا في الزجاج والألمنيوم، إلى جانب التكييف والتبريد والخدمات الفنية.',
+    ctaText: 'تواصل معنا',
+    ctaHref: '/contact',
+  },
+  glassFeatured: {
+    caption: 'GLASS & ALUMINUM WORKS',
+    headline: 'زجاج وألمنيوم بتنفيذ يواكب كل مشروع',
+    body: 'واجهات، زجاج سكريت، Curtain Wall، Structural Curtain Wall، شورات زجاجية، وأعمال ألمنيوم بتصاميم وتنفيذ يواكب متطلبات كل مشروع.',
+    ctaText: 'خدمات الزجاج والألمنيوم',
+    ctaHref: '/services',
+    imageSrc: '/images/site/glass-tall-facade.jpg',
+    imageAlt: 'قواطع زجاجية للمكاتب من أعمال صيانتك',
+  },
+  collection: {
+    caption: 'OUR WORKS · SWIPE TO WATCH OUR WORK →',
+    headline: 'نماذج من أعمالنا',
+    products: allWorksProducts,
+  },
+  technicalFeatured: {
+    caption: 'COOLING & TECHNICAL WORKS',
+    headline: 'حلول فنية بتنفيذ احترافي',
+    body: 'أعمال تركيب وصيانة التكييف، أنظمة المراقبة، الأعمال الكهربائية، وخدمات الصيانة العامة، بتنفيذ احترافي وحلول عملية.',
+    ctaText: 'اطلب خدمتك',
+    ctaHref: '/contact',
+    imageSrc: '/images/site/ac-outdoor.jpg',
+    imageAlt: 'أعمال فنية وتشطيبات داخلية من أعمال العميل',
+    reversed: true,
+  },
+  brand: {
+    headline: 'الجودة تظهر في التفاصيل',
+    body: 'نحرص في كل مشروع على أن تتحول الخبرة إلى نتيجة ملموسة تجمع بين الجودة، الوظيفة، والتصميم.',
+    ctaText: 'خدماتنا',
+    ctaHref: '/services',
+    videoSrc: '/videos/still-life-showcase.mp4',
+  },
+  contactCta: {
+    headline: 'عندك مشروع جديد؟',
+    body: 'شاركنا احتياجك، وفريقنا جاهز لتقديم الحل المناسب وتنفيذه بكفاءة.',
+    handle: 'صيانتك · الرياض',
+    ctaText: 'تواصل معنا',
+    ctaHref: '/contact',
+    videoSrc: '/videos/glass-facade.mp4',
+  },
+};
+
+export const contactPage = {
+  hero: {
+    caption: 'CONTACT US',
+    headline: 'خلّنا نبدأ مشروعك',
+    subhead: 'هل تبحث عن حلول للزجاج والألمنيوم؟ أم تحتاج إلى خدمات التكييف والتبريد أو الخدمات الفنية؟ فريقنا جاهز للاستماع إلى احتياجاتك وتقديم الحل المناسب لمشروعك باحترافية وسرعة استجابة.',
+    ctaText: 'اتصل الآن',
+    ctaHref: 'tel:0536213276',
+    videoSrc: '/videos/metal-parts-showcase.mp4',
+  },
+  showcase: {
+    caption: 'READY WHEN YOU ARE',
+    headline: 'الحل المناسب يبدأ بفهم احتياجك',
+    subhead: 'تواصل معنا للحجز والاستفسار، وسنساعدك في اختيار وتنفيذ الحل الأنسب لمشروعك.',
+    ctaText: 'خدماتنا',
+    ctaHref: '/services',
+  },
+  cooling: {
+    caption: 'COOLING & TECHNICAL',
+    headline: 'التكييف والتبريد',
+    body: 'لخدمات التكييف والتبريد، تركيب وصيانة المكيفات، التنظيف، تعبئة الفريون والخدمات الفنية، تواصل معنا مباشرة.',
+    ctaText: '0536213276',
+    ctaHref: 'tel:0536213276',
+    imageSrc: technicalStock.outdoor,
+    imageAlt: 'فنيون أثناء تنفيذ أعمال تكييف',
+    contactPhone: '0536213276',
+  },
+  glass: {
+    caption: 'GLASS & ALUMINUM',
+    headline: 'زجاج السكريت والألمنيوم',
+    body: 'للواجهات، زجاج السكريت، Curtain Wall، Structural Curtain Wall، الشورات الزجاجية والدرابزين وأعمال الألمنيوم، تواصل معنا مباشرة.',
+    ctaText: '0547856474',
+    ctaHref: 'tel:0547856474',
+    imageSrc: glassStock.modernHouse,
+    imageAlt: 'منزل حديث بواجهات زجاج وألمنيوم',
+    reversed: true,
+    contactPhone: '0547856474',
+  },
+  brand: {
+    headline: 'الرياض · حي الفيصلية',
+    body: 'زجاج وألمنيوم | واجهات | Structural & Curtain Wall | شورات زجاجية | تكييف وتبريد | كاميرات مراقبة | أعمال كهرباء | صيانة عامة',
+    ctaText: 'شاهد أعمالنا',
+    ctaHref: '/works',
+    videoSrc: '/videos/glass-facade.mp4',
+  },
+  contactCta: {
+    headline: 'تواصل معنا اليوم',
+    body: 'وابدأ خطوتك الأولى نحو تنفيذ احترافي يناسب احتياجات مشروعك.',
+    handle: '0536213276 · 0547856474',
+    ctaText: 'اتصل الآن',
+    ctaHref: 'tel:0536213276',
+    videoSrc: '/videos/glass-facade.mp4',
+  },
+};
